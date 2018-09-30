@@ -1,3 +1,7 @@
+#Jaiteg S Mundi
+#CS 483: Web Data
+#Assignment 2: TF-IDF
+
 from collections import Counter
 from operator import itemgetter
 import csv
@@ -61,6 +65,9 @@ def relevance(d, query):
 	#Calculate relevance 
 	sTF = sum(TF.values())
 	relv = sTF/nDocsQ
+
+	if relv == 0:
+		return 0 
 
 	return relv
 
